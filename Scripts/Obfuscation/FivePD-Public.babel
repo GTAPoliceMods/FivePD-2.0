@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Babel Obfuscator MSBuild Project File
+	Version 9.9.0.0
+-->
+<Project DefaultTargets="FivePDGamemodeServernet;FivePDGamemodeClientnet" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="Babel" AssemblyName="Babel.Build, Version=9.9.0.0, Culture=neutral, PublicKeyToken=138d17b5bd621ab7" />
+  <Target Name="FivePDGamemodeServernet">
+    <PropertyGroup>
+      <BabelInputFile>..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\FivePD.Gamemode.Server.net.dll</BabelInputFile>
+      <BabelOutputFile>..\..\build-public\Libraries\FivePD.Gamemode.Server\FivePD.Gamemode.Server.net.dll</BabelOutputFile>
+      <CleanAttributes>\[mscorlib\]System.Runtime.CompilerServices.CompilerGeneratedAttribute;\[mscorlib\]System.Diagnostics.DebuggerDisplayAttribute;\[mscorlib\]System.Diagnostics.DebuggerBrowsableAttribute;\[mscorlib\]System.Diagnostics.DebuggerNonUserCodeAttribute;\[mscorlib\]System.Diagnostics.DebuggerHiddenAttribute;\[mscorlib\]System.Diagnostics.DebuggerStepThroughAttribute;false</CleanAttributes>
+      <ConstRemoval>false</ConstRemoval>
+      <ControlFlowObfuscation>goto=true;switch=true;case=true;if=true;call=true;value=true;token=true;underflow=true;true</ControlFlowObfuscation>
+      <CopyAttributes>true</CopyAttributes>
+      <DeadCodeElimination>false</DeadCodeElimination>
+      <DebuggingProtection>false</DebuggingProtection>
+      <DependenciesManifest>true</DependenciesManifest>
+      <DetectIfObfuscated>false</DetectIfObfuscated>
+      <DisgregateRemoval>false</DisgregateRemoval>
+      <DynamicProxy>None</DynamicProxy>
+      <EmitInvalidOpcodes>false</EmitInvalidOpcodes>
+      <EnableObfuscationAgent>true</EnableObfuscationAgent>
+      <EnumRemoval>false</EnumRemoval>
+      <FlattenNamespaces>true</FlattenNamespaces>
+      <GenerateDebug>false</GenerateDebug>
+      <GenerateLogFile>false</GenerateLogFile>
+      <GenerateMapOutFile>true</GenerateMapOutFile>
+      <ILIterations>3</ILIterations>
+      <InlineExpansion>false</InlineExpansion>
+      <Instrument>false</Instrument>
+      <InstrumentEmptyMethods>true</InstrumentEmptyMethods>
+      <Internalize>false</Internalize>
+      <MapOutFile>..\..\build-public-mappings\FivePD.Gamemode.Server.net.dll.map.xml</MapOutFile>
+      <ModuleInitializer>false</ModuleInitializer>
+      <MsilEncryption>false</MsilEncryption>
+      <NameLength>12</NameLength>
+      <ObfuscateEvents>true</ObfuscateEvents>
+      <ObfuscateFields>true</ObfuscateFields>
+      <ObfuscateMethods>true</ObfuscateMethods>
+      <ObfuscateParameters>true</ObfuscateParameters>
+      <ObfuscateProperties>true</ObfuscateProperties>
+      <ObfuscateTypes>true</ObfuscateTypes>
+      <ObfuscateXaml>false</ObfuscateXaml>
+      <OverloadedRenaming>false</OverloadedRenaming>
+      <ResourceEncryption>false</ResourceEncryption>
+      <SealClasses>false</SealClasses>
+      <SearchSatelliteAssemblies>true</SearchSatelliteAssemblies>
+      <ShowLogo>true</ShowLogo>
+      <ShowStatistics>true</ShowStatistics>
+      <StringEncryption>xor</StringEncryption>
+      <SuppressIldasm>true</SuppressIldasm>
+      <SuppressReflection>false</SuppressReflection>
+      <TamperingDetection>false</TamperingDetection>
+      <UnicodeNormalization>0x250-0x2AF,0x2B0-0x2FF,0x300-0x36F,0x370-0x3FF,0x400-0x4FF,0x500-0x52F,0x530-0x58F,0x590-0x5FF,0x600-0x6FF,0x700-0x74F,0x780-0x7BF,0x900-0x97F,0x980-0x9FF,0xA00-0xA7F,0xA80-0xAFF,0xB00-0xB7F,0xB80-0xBFF,0xC00-0xC7F,0xC80-0xCFF,0xD00-0xD7F,0xD80-0xDFF,0xE00-0xE7F,0xE80-0xEFF,0xF00-0xFFF,0x1000-0x109F,0x10A0-0x10FF,0x1100-0x11FF,0x1200-0x137F,0x13A0-0x13FF,0x1400-0x167F,0x1680-0x169F,0x16A0-0x16FF,0x1700-0x171F,0x1720-0x173F,0x1740-0x175F,0x1760-0x177F,0x1780-0x17FF,0x1800-0x18AF,0x1900-0x194F,0x1950-0x197F,0x19E0-0x19FF,0x1D00-0x1D7F,0x1E00-0x1EFF,0x1F00-0x1FFF,0x2000-0x206F,0x2070-0x209F,0x20A0-0x20CF,0x20D0-0x20FF,0x2100-0x214F,0x2150-0x218F,0x2190-0x21FF,0x2200-0x22FF,0x2300-0x23FF,0x2400-0x243F,0x2440-0x245F,0x2460-0x24FF,0x2500-0x257F,0x2580-0x259F,0x25A0-0x25FF,0x2600-0x26FF,0x2700-0x27BF,0x27C0-0x27EF,0x27F0-0x27FF,0x2800-0x28FF,0x2900-0x297F,0x2980-0x29FF,0x2A00-0x2AFF,0x2B00-0x2BFF,0x2E80-0x2EFF,0x2F00-0x2FDF,0x2FF0-0x2FFF,0x3000-0x303F,0x3040-0x309F,0x30A0-0x30FF,0x3100-0x312F,0x3130-0x318F,0x3190-0x319F,0x31A0-0x31BF,0x31F0-0x31FF,0x3200-0x32FF,0x3300-0x33FF,0x3400-0x4DBF,0x4DC0-0x4DFF,0x4E00-0x9FFF,0xA000-0xA48F,0xA490-0xA4CF,0xAC00-0xD7AF,0xD800-0xDB7F,0xDB80-0xDBFF,0xDC00-0xDFFF,0xE000-0xF8FF,0xF900-0xFAFF,0xFB00-0xFB4F,0xFB50-0xFDFF,0xFE00-0xFE0F,0xFE20-0xFE2F,0xFE30-0xFE4F,0xFE50-0xFE6F,0xFE70-0xFEFF,0xFF00-0xFFEF,0xFFF0-0xFFFF</UnicodeNormalization>
+      <ValueEncryption>false</ValueEncryption>
+      <VerboseLevel>1</VerboseLevel>
+      <VirtualFunctions>true</VirtualFunctions>
+      <XmlRules>
+        <Rules targetAssembly="FivePD.Gamemode.Server.net">
+          <Rule name="Default" feature="all" exclude="false" applyToMembers="true">
+            <Pattern>*</Pattern>
+          </Rule>
+          <Rule name="FriendlyBootstrapper" feature="renaming" exclude="true" applyToMembers="true">
+            <Pattern>FivePD.Gamemode.Server.Bootstrapper</Pattern>
+            <Description>Disable Renaming</Description>
+          </Rule>
+        </Rules>
+        <Rules targetAssembly="Newtonsoft.Json">
+          <Rule name="exclude json" feature="all" exclude="true" applyToMembers="true">
+            <Pattern>*</Pattern>
+          </Rule>
+        </Rules>
+      </XmlRules>
+    </PropertyGroup>
+    <ItemGroup>
+      <SearchDirectory Remove="@(SearchDirectory)" />
+      <SearchDirectory Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server" />
+    </ItemGroup>
+    <ItemGroup>
+      <MergeAssembly Remove="@(MergeAssembly)" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Microsoft.Bcl.AsyncInterfaces.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Microsoft.CSharp.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Microsoft.Extensions.DependencyInjection.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Microsoft.Extensions.DependencyModel.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Namotion.Reflection.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Newtonsoft.Json.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\NJsonSchema.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Scrutor.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Sentry.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Serilog.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Serilog.Sinks.Console.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\Serilog.Sinks.File.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\System.Buffers.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\System.Collections.Immutable.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\System.Memory.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\System.Numerics.Vectors.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\System.Reflection.Metadata.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\System.Runtime.CompilerServices.Unsafe.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\System.Text.Encodings.Web.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\System.Text.Json.dll" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Server\System.Threading.Tasks.Extensions.dll" />
+    </ItemGroup>
+    <Message Text="Obfuscating $(BabelInputFile)..." />
+    <Babel CleanAttributes="$(CleanAttributes)" ConstRemoval="$(ConstRemoval)" ControlFlowObfuscation="$(ControlFlowObfuscation)" CopyAttributes="$(CopyAttributes)" DeadCodeElimination="$(DeadCodeElimination)" DebuggingProtection="$(DebuggingProtection)" DependenciesManifest="$(DependenciesManifest)" DetectIfObfuscated="$(DetectIfObfuscated)" DisgregateRemoval="$(DisgregateRemoval)" DynamicProxy="$(DynamicProxy)" EmitInvalidOpcodes="$(EmitInvalidOpcodes)" EnableObfuscationAgent="$(EnableObfuscationAgent)" EnumRemoval="$(EnumRemoval)" FlattenNamespaces="$(FlattenNamespaces)" GenerateDebug="$(GenerateDebug)" GenerateLogFile="$(GenerateLogFile)" GenerateMapOutFile="$(GenerateMapOutFile)" ILIterations="$(ILIterations)" InlineExpansion="$(InlineExpansion)" InputFile="$(BabelInputFile)" Instrument="$(Instrument)" InstrumentEmptyMethods="$(InstrumentEmptyMethods)" Internalize="$(Internalize)" MapOutFile="$(MapOutFile)" MergeAssemblies="@(MergeAssembly)" ModuleInitializer="$(ModuleInitializer)" MsilEncryption="$(MsilEncryption)" NameLength="$(NameLength)" ObfuscateEvents="$(ObfuscateEvents)" ObfuscateFields="$(ObfuscateFields)" ObfuscateMethods="$(ObfuscateMethods)" ObfuscateParameters="$(ObfuscateParameters)" ObfuscateProperties="$(ObfuscateProperties)" ObfuscateTypes="$(ObfuscateTypes)" ObfuscateXaml="$(ObfuscateXaml)" OutputFile="$(BabelOutputFile)" OverloadedRenaming="$(OverloadedRenaming)" ResourceEncryption="$(ResourceEncryption)" SealClasses="$(SealClasses)" SearchDirectories="@(SearchDirectory)" SearchSatelliteAssemblies="$(SearchSatelliteAssemblies)" ShowLogo="$(ShowLogo)" ShowStatistics="$(ShowStatistics)" StringEncryption="$(StringEncryption)" SuppressIldasm="$(SuppressIldasm)" SuppressReflection="$(SuppressReflection)" TamperingDetection="$(TamperingDetection)" UnicodeNormalization="$(UnicodeNormalization)" ValueEncryption="$(ValueEncryption)" VerboseLevel="$(VerboseLevel)" VirtualFunctions="$(VirtualFunctions)" XmlRules="$(XmlRules)" />
+  </Target>
+  <Target Name="FivePDGamemodeClientnet">
+    <PropertyGroup>
+      <BabelInputFile>..\..\build-public-pre\Libraries\FivePD.Gamemode.Client\FivePD.Gamemode.Client.net.dll</BabelInputFile>
+      <BabelOutputFile>..\..\build-public\Libraries\FivePD.Gamemode.Client\FivePD.Gamemode.Client.net.dll</BabelOutputFile>
+      <CleanAttributes>\[mscorlib\]System.Runtime.CompilerServices.CompilerGeneratedAttribute;\[mscorlib\]System.Diagnostics.DebuggerDisplayAttribute;\[mscorlib\]System.Diagnostics.DebuggerBrowsableAttribute;\[mscorlib\]System.Diagnostics.DebuggerNonUserCodeAttribute;\[mscorlib\]System.Diagnostics.DebuggerHiddenAttribute;\[mscorlib\]System.Diagnostics.DebuggerStepThroughAttribute;false</CleanAttributes>
+      <ConstRemoval>false</ConstRemoval>
+      <ControlFlowObfuscation>goto=false;switch=true;case=true;if=true;call=true;value=true;token=true;underflow=true;true</ControlFlowObfuscation>
+      <CopyAttributes>true</CopyAttributes>
+      <DeadCodeElimination>false</DeadCodeElimination>
+      <DebuggingProtection>false</DebuggingProtection>
+      <DependenciesManifest>true</DependenciesManifest>
+      <DetectIfObfuscated>false</DetectIfObfuscated>
+      <DisgregateRemoval>false</DisgregateRemoval>
+      <DynamicProxy>None</DynamicProxy>
+      <EmitInvalidOpcodes>false</EmitInvalidOpcodes>
+      <EnableObfuscationAgent>true</EnableObfuscationAgent>
+      <EnumRemoval>false</EnumRemoval>
+      <FlattenNamespaces>true</FlattenNamespaces>
+      <GenerateDebug>false</GenerateDebug>
+      <GenerateLogFile>false</GenerateLogFile>
+      <GenerateMapOutFile>true</GenerateMapOutFile>
+      <ILIterations>3</ILIterations>
+      <InlineExpansion>false</InlineExpansion>
+      <Instrument>false</Instrument>
+      <InstrumentEmptyMethods>true</InstrumentEmptyMethods>
+      <Internalize>false</Internalize>
+      <MapOutFile>..\..\build-public-mappings\FivePD.Gamemode.Client.net.dll.map.xml</MapOutFile>
+      <ModuleInitializer>false</ModuleInitializer>
+      <MsilEncryption>false</MsilEncryption>
+      <NameLength>12</NameLength>
+      <ObfuscateEvents>true</ObfuscateEvents>
+      <ObfuscateFields>true</ObfuscateFields>
+      <ObfuscateMethods>true</ObfuscateMethods>
+      <ObfuscateParameters>true</ObfuscateParameters>
+      <ObfuscateProperties>true</ObfuscateProperties>
+      <ObfuscateTypes>true</ObfuscateTypes>
+      <ObfuscateXaml>false</ObfuscateXaml>
+      <OverloadedRenaming>false</OverloadedRenaming>
+      <ResourceEncryption>false</ResourceEncryption>
+      <SealClasses>false</SealClasses>
+      <SearchSatelliteAssemblies>true</SearchSatelliteAssemblies>
+      <ShowLogo>true</ShowLogo>
+      <ShowStatistics>true</ShowStatistics>
+      <StringEncryption>xor</StringEncryption>
+      <SuppressIldasm>true</SuppressIldasm>
+      <SuppressReflection>false</SuppressReflection>
+      <TamperingDetection>false</TamperingDetection>
+      <UnicodeNormalization>0x250-0x2AF,0x2B0-0x2FF,0x300-0x36F,0x370-0x3FF,0x400-0x4FF,0x500-0x52F,0x530-0x58F,0x590-0x5FF,0x600-0x6FF,0x700-0x74F,0x780-0x7BF,0x900-0x97F,0x980-0x9FF,0xA00-0xA7F,0xA80-0xAFF,0xB00-0xB7F,0xB80-0xBFF,0xC00-0xC7F,0xC80-0xCFF,0xD00-0xD7F,0xD80-0xDFF,0xE00-0xE7F,0xE80-0xEFF,0xF00-0xFFF,0x1000-0x109F,0x10A0-0x10FF,0x1100-0x11FF,0x1200-0x137F,0x13A0-0x13FF,0x1400-0x167F,0x1680-0x169F,0x16A0-0x16FF,0x1700-0x171F,0x1720-0x173F,0x1740-0x175F,0x1760-0x177F,0x1780-0x17FF,0x1800-0x18AF,0x1900-0x194F,0x1950-0x197F,0x19E0-0x19FF,0x1D00-0x1D7F,0x1E00-0x1EFF,0x1F00-0x1FFF,0x2000-0x206F,0x2070-0x209F,0x20A0-0x20CF,0x20D0-0x20FF,0x2100-0x214F,0x2150-0x218F,0x2190-0x21FF,0x2200-0x22FF,0x2300-0x23FF,0x2400-0x243F,0x2440-0x245F,0x2460-0x24FF,0x2500-0x257F,0x2580-0x259F,0x25A0-0x25FF,0x2600-0x26FF,0x2700-0x27BF,0x27C0-0x27EF,0x27F0-0x27FF,0x2800-0x28FF,0x2900-0x297F,0x2980-0x29FF,0x2A00-0x2AFF,0x2B00-0x2BFF,0x2E80-0x2EFF,0x2F00-0x2FDF,0x2FF0-0x2FFF,0x3000-0x303F,0x3040-0x309F,0x30A0-0x30FF,0x3100-0x312F,0x3130-0x318F,0x3190-0x319F,0x31A0-0x31BF,0x31F0-0x31FF,0x3200-0x32FF,0x3300-0x33FF,0x3400-0x4DBF,0x4DC0-0x4DFF,0x4E00-0x9FFF,0xA000-0xA48F,0xA490-0xA4CF,0xAC00-0xD7AF,0xD800-0xDB7F,0xDB80-0xDBFF,0xDC00-0xDFFF,0xE000-0xF8FF,0xF900-0xFAFF,0xFB00-0xFB4F,0xFB50-0xFDFF,0xFE00-0xFE0F,0xFE20-0xFE2F,0xFE30-0xFE4F,0xFE50-0xFE6F,0xFE70-0xFEFF,0xFF00-0xFFEF,0xFFF0-0xFFFF</UnicodeNormalization>
+      <ValueEncryption>false</ValueEncryption>
+      <VerboseLevel>1</VerboseLevel>
+      <VirtualFunctions>true</VirtualFunctions>
+      <XmlRules>
+        <Rules targetAssembly="FivePD.Gamemode.Client.net">
+          <Rule name="Default" feature="all" exclude="false" applyToMembers="true">
+            <Pattern>*</Pattern>
+          </Rule>
+          <Rule name="FriendlyBootstrapper" feature="renaming" exclude="true" applyToMembers="true">
+            <Pattern>FivePD.Gamemode.Client.Bootstrapper</Pattern>
+            <Description>Disable Renaming</Description>
+          </Rule>
+        </Rules>
+      </XmlRules>
+    </PropertyGroup>
+    <ItemGroup>
+      <SearchDirectory Remove="@(SearchDirectory)" />
+      <SearchDirectory Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Client" />
+    </ItemGroup>
+    <ItemGroup>
+      <MergeAssembly Remove="@(MergeAssembly)" />
+      <MergeAssembly Include="..\..\build-public-pre\Libraries\FivePD.Gamemode.Client\Newtonsoft.Json.dll" />
+    </ItemGroup>
+    <Message Text="Obfuscating $(BabelInputFile)..." />
+    <Babel CleanAttributes="$(CleanAttributes)" ConstRemoval="$(ConstRemoval)" ControlFlowObfuscation="$(ControlFlowObfuscation)" CopyAttributes="$(CopyAttributes)" DeadCodeElimination="$(DeadCodeElimination)" DebuggingProtection="$(DebuggingProtection)" DependenciesManifest="$(DependenciesManifest)" DetectIfObfuscated="$(DetectIfObfuscated)" DisgregateRemoval="$(DisgregateRemoval)" DynamicProxy="$(DynamicProxy)" EmitInvalidOpcodes="$(EmitInvalidOpcodes)" EnableObfuscationAgent="$(EnableObfuscationAgent)" EnumRemoval="$(EnumRemoval)" FlattenNamespaces="$(FlattenNamespaces)" GenerateDebug="$(GenerateDebug)" GenerateLogFile="$(GenerateLogFile)" GenerateMapOutFile="$(GenerateMapOutFile)" ILIterations="$(ILIterations)" InlineExpansion="$(InlineExpansion)" InputFile="$(BabelInputFile)" Instrument="$(Instrument)" InstrumentEmptyMethods="$(InstrumentEmptyMethods)" Internalize="$(Internalize)" MapOutFile="$(MapOutFile)" MergeAssemblies="@(MergeAssembly)" ModuleInitializer="$(ModuleInitializer)" MsilEncryption="$(MsilEncryption)" NameLength="$(NameLength)" ObfuscateEvents="$(ObfuscateEvents)" ObfuscateFields="$(ObfuscateFields)" ObfuscateMethods="$(ObfuscateMethods)" ObfuscateParameters="$(ObfuscateParameters)" ObfuscateProperties="$(ObfuscateProperties)" ObfuscateTypes="$(ObfuscateTypes)" ObfuscateXaml="$(ObfuscateXaml)" OutputFile="$(BabelOutputFile)" OverloadedRenaming="$(OverloadedRenaming)" ResourceEncryption="$(ResourceEncryption)" SealClasses="$(SealClasses)" SearchDirectories="@(SearchDirectory)" SearchSatelliteAssemblies="$(SearchSatelliteAssemblies)" ShowLogo="$(ShowLogo)" ShowStatistics="$(ShowStatistics)" StringEncryption="$(StringEncryption)" SuppressIldasm="$(SuppressIldasm)" SuppressReflection="$(SuppressReflection)" TamperingDetection="$(TamperingDetection)" UnicodeNormalization="$(UnicodeNormalization)" ValueEncryption="$(ValueEncryption)" VerboseLevel="$(VerboseLevel)" VirtualFunctions="$(VirtualFunctions)" XmlRules="$(XmlRules)" />
+  </Target>
+</Project>

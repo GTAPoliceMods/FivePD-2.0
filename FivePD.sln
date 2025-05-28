@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FivePD.Gamemode.Client", "FivePD.Gamemode.Client\FivePD.Gamemode.Client.csproj", "{4CF57E85-1599-4CF0-9794-3137B126C666}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FivePD.Common", "FivePD.Common\FivePD.Common.shproj", "{63ECCE32-17F2-4B76-91AE-FAFD2E080610}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FivePD.Gamemode.Server", "FivePD.Gamemode.Server\FivePD.Gamemode.Server.csproj", "{87DAAE85-FEB5-4860-9E51-31DCB2B30820}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FivePD.Gamemode.IA.AmbientEvents", "FivePD.Gamemode.IA.AmbientEvents\FivePD.Gamemode.IA.AmbientEvents.csproj", "{4509990C-E190-4355-9F88-D06FCABD86D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FivePD.JsonGenerator", "FivePD.JsonGenerator\FivePD.JsonGenerator.csproj", "{BBA92746-14EB-4C46-BBE6-7D1D0F74589E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FivePD.StartupProject", "FivePD.StartupProject\FivePD.StartupProject.csproj", "{29865DEC-420B-4EEF-8A84-B8A8052B89E6}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		FivePD.Common\FivePD.Common.projitems*{4cf57e85-1599-4cf0-9794-3137b126c666}*SharedItemsImports = 5
+		FivePD.Common\FivePD.Common.projitems*{63ecce32-17f2-4b76-91ae-fafd2e080610}*SharedItemsImports = 13
+		FivePD.Common\FivePD.Common.projitems*{87daae85-feb5-4860-9e51-31dcb2b30820}*SharedItemsImports = 5
+		FivePD.Common\FivePD.Common.projitems*{bba92746-14eb-4c46-bbe6-7d1d0f74589e}*SharedItemsImports = 5
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CF57E85-1599-4CF0-9794-3137B126C666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CF57E85-1599-4CF0-9794-3137B126C666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CF57E85-1599-4CF0-9794-3137B126C666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CF57E85-1599-4CF0-9794-3137B126C666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63ECCE32-17F2-4B76-91AE-FAFD2E080610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63ECCE32-17F2-4B76-91AE-FAFD2E080610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87DAAE85-FEB5-4860-9E51-31DCB2B30820}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{87DAAE85-FEB5-4860-9E51-31DCB2B30820}.Debug|Any CPU.Build.0 = Debug|x64
+		{87DAAE85-FEB5-4860-9E51-31DCB2B30820}.Release|Any CPU.ActiveCfg = Release|x64
+		{87DAAE85-FEB5-4860-9E51-31DCB2B30820}.Release|Any CPU.Build.0 = Release|x64
+		{4509990C-E190-4355-9F88-D06FCABD86D8}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{4509990C-E190-4355-9F88-D06FCABD86D8}.Debug|Any CPU.Build.0 = Debug|x64
+		{4509990C-E190-4355-9F88-D06FCABD86D8}.Release|Any CPU.ActiveCfg = Release|x64
+		{4509990C-E190-4355-9F88-D06FCABD86D8}.Release|Any CPU.Build.0 = Release|x64
+		{BBA92746-14EB-4C46-BBE6-7D1D0F74589E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA92746-14EB-4C46-BBE6-7D1D0F74589E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA92746-14EB-4C46-BBE6-7D1D0F74589E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA92746-14EB-4C46-BBE6-7D1D0F74589E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29865DEC-420B-4EEF-8A84-B8A8052B89E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29865DEC-420B-4EEF-8A84-B8A8052B89E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29865DEC-420B-4EEF-8A84-B8A8052B89E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29865DEC-420B-4EEF-8A84-B8A8052B89E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {725FEEEF-149A-4CB5-9FF7-DA0D18995BA9}
+	EndGlobalSection
+EndGlobal

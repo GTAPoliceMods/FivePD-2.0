@@ -1,0 +1,16 @@
+[
+  {
+    "Title": "Loadout 1",
+    "Weapons": [
+      {
+        "Key": "WEAPON_PISTOL",
+        "ComponentKeys": [
+          "COMPONENT_PISTOL_CLIP_02",
+          "COMPONENT_AT_PI_FLSH",
+          "COMPONENT_AT_PI_SUPP_02"
+        ],
+        "Ammunition": 1000
+      }
+    ]
+  }
+]

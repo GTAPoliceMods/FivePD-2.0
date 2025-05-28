@@ -1,0 +1,17 @@
+[
+  {
+    "Title": "Test item 1",
+    "IsIllegal": false,
+    "Location": 0
+  },
+  {
+    "Title": "Test item 2",
+    "IsIllegal": false,
+    "Location": 1
+  },
+  {
+    "Title": "Test item 3",
+    "IsIllegal": false,
+    "Location": 2
+  }
+]

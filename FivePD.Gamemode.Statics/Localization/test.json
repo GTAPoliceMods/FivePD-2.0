@@ -1,0 +1,36 @@
+{
+  "Title": "T: English",
+  "DutyMenu": {
+    "Title": "T: Duty menu",
+    "OnDuty": {
+      "Title": "T: On duty",
+      "Description": "T: Description of on duty."
+    },
+    "GetLoadout": {
+      "Title": "T: Get loadout",
+      "Description": "T: Description of get loadout"
+    },
+    "ChangeLanguage": {
+      "Title": "T: Change language",
+      "Description": "T: Description of change language"
+    },
+    "SpawnVehicle": {
+      "Title": "T: Spawn vehicle",
+      "Description": "T: Description of spawn vehicle"
+    }
+  },
+  "TrafficStop": {
+    "Initiate": "T: Turn on your sirens to {{initiate(initiate)}} the traffic stop.",
+    "WaitUntilStop": "T: Wait until the vehicle has come to a stop, then proceed with the traffic stop.",
+    "Proceed": "T: The vehicle has stopped. Proceed with the traffic stop.",
+    "Canceled": "T: You've canceled the traffic stop.",
+    "StoppedVehicle": "T: Stopped vehicle"
+  },
+  "ErrorLocalizations": {
+    "MultipleMenusWithSameKey": "T: There are multiple menus which key is set to {{key}}. Make sure to change them, otherwise they will not work."
+  },
+  "WarningLocalizations": {
+    "ConfigException": "T: An error occured while parsing the {{path}} file, the default values will be used. Make sure that the JSON formatting is correct, we recommend using the following site to check it: https://jsonformatter.org/",
+    "EmptyConfigException": "T: The {{path}} file is empty, the default values will be used."
+  }
+}

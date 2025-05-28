@@ -1,0 +1,13 @@
+<Project>
+    <PropertyGroup>
+        <AllowedReferenceRelatedFileExtensions>-</AllowedReferenceRelatedFileExtensions>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <DocumentationFile>$(Tmp)/null.xml</DocumentationFile>
+        <CodeAnalysisRuleSet>$(ProjectDir)../StyleCop.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="8.27.0.35380" PrivateAssets="all"/>
+        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.354" PrivateAssets="all"/>
+        <AdditionalFiles Include="$(ProjectDir)../stylecop.json" Link="stylecop.json"/>
+    </ItemGroup>
+</Project>

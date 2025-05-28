@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "settings": {
+    "documentationRules": {
+      "companyName": "GTAPoliceMods LLC",
+      "copyrightText": "Copyright (c) {companyName}. All Rights Reserved.\r\n\r\nAll code and assets contained in this file are STRICTLY\r\nthe intellectual property of GTAPoliceMods unless otherwise\r\nnoted by a license provided. Do not copy or redistribute.",
+      "xmlHeader": false,
+      "fileNamingConvention": "metadata"
+    },
+    "orderingRules": {
+      "usingDirectivesPlacement": "outsideNamespace"
+    }
+  }
+}

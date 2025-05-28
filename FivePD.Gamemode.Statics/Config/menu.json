@@ -1,0 +1,16 @@
+{
+  "DutyMenu": {
+    "DutyToggle": {
+      "Enabled": true,
+      "AdminOnly": false
+    },
+    "SpawnVehicle": {
+      "Enabled": true,
+      "AdminOnly": false
+    },
+    "GetLoadout": {
+      "Enabled": true,
+      "AdminOnly": false
+    }
+  }
+}
