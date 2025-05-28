@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <AssemblyName>FivePD.Gamemode.Server.net</AssemblyName>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <RuntimeIdentifiers>win-x64;linux-x64</RuntimeIdentifiers>
+        <AssemblyTitle>FivePD.Gamemode.Server</AssemblyTitle>
+        <Product>FivePD.Gamemode.Server</Product>
+        <Description>The First Response Multiplayer Serverside Library</Description>
+        <Copyright>Copyright © GTAPoliceMods 2024</Copyright>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <FileVersion>2.0.0.0</FileVersion>
+        <DebugType>none</DebugType>
+        <BuildDependsOn>$(BuildDependsOn);AfterBuildMigrated</BuildDependsOn>
+        <LangVersion>8</LangVersion>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <Configurations>Release;Debug</Configurations>
+        <Platforms>x64</Platforms>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+        <OutputPath>../FXServer-Data/resources/fivepd/Libraries/FivePD.Gamemode.Server</OutputPath>
+        <PostBuildEvent Condition=" '$(OS)' != 'Unix' ">powershell.exe $(SolutionDir)\Scripts\RestartLocalFXServer.ps1</PostBuildEvent>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+        <OutputPath>../build-public-pre/Libraries/FivePD.Gamemode.Server</OutputPath>
+    </PropertyGroup>
+    <Import Project="..\FivePD.Common\FivePD.Common.projitems" Label="Shared" />
+
+    <!-- Remove automatically generated files -->
+    <Target Name="RemoveGeneratedFiles" AfterTargets="Build">
+        <ItemGroup>
+            <RemovableGeneratedFiles Include="$(OutDir)*.json;$(OutDir)*.xml" />
+        </ItemGroup>
+        <Delete Files="@(RemovableGeneratedFiles)" />
+    </Target>
+
+    <!-- Copy static files to respective directories -->
+    <ItemGroup>
+        <StaticFiles Include="..\FivePD.Gamemode.Statics\**\*.*" />
+    </ItemGroup>
+    <Target Name="CopyStatics" BeforeTargets="CopyFilesToOutputDirectory" DependsOnTargets="CopyStaticsDebug;CopyStaticsRelease" />
+    <Target Name="CopyStaticsDebug" Condition=" '$(Configuration)' == 'Debug' ">
+        <Copy SourceFiles="@(StaticFiles)" DestinationFiles="@(StaticFiles->'..\FXServer-Data\resources\fivepd\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    </Target>
+    <Target Name="CopyStaticsRelease" Condition=" '$(Configuration)' == 'Release' ">
+        <Copy SourceFiles="@(StaticFiles)" DestinationFiles="@(StaticFiles->'..\build-public\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    </Target>
+
+    <ItemGroup>
+        <PackageReference Include="CitizenFX.Core.Server" Version="1.0.5375" />
+        <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.26" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.26" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.26">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" Cop="false" />
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.7" />
+        <PackageReference Include="Scrutor" Version="4.1.0" />
+        <PackageReference Include="Sentry" Version="3.18.0" />
+        <PackageReference Include="Serilog" Version="2.10.1-dev-01343" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />
+        <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+        <PackageReference Update="SonarAnalyzer.CSharp" Version="8.36.1.44192" />
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="CitizenFX.Core.Server, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <Private>True</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Remove="obj\x64\Debug\.NETFramework,Version=v4.0.AssemblyAttributes.cs" />
+        <Compile Remove="obj\x64\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+        <Compile Remove="obj\x64\Release\.NETFramework,Version=v4.0.AssemblyAttributes.cs" />
+        <Compile Remove="obj\x64\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+        <Compile Remove="obj\x64\Debug\netcoreapp2.1\FivePD.Gamemode.Server.AssemblyInfo.cs" />
+        <Compile Remove="obj\x64\Debug\netcoreapp2.1\FivePD.Gamemode.ServerLegacy.AssemblyInfo.cs" />
+        <Compile Remove="obj\x64\Release\net452\FivePD.Gamemode.Server.AssemblyInfo.cs" />
+        <Compile Remove="obj\x64\Release\net472\FivePD.Gamemode.Server.AssemblyInfo.cs" />
+        <Compile Remove="obj\x64\Release\netstandard2.0\FivePD.Gamemode.Server.AssemblyInfo.cs" />
+    </ItemGroup>
+</Project>
