@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>FivePD.Gamemode.Client.net</AssemblyName>
+    <TargetFramework>net452</TargetFramework>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RuntimeIdentifiers>win</RuntimeIdentifiers>
+    <AssemblyTitle>FivePD.Gamemode.Client</AssemblyTitle>
+    <Product>FivePD.Gamemode.Client</Product>
+    <Description>The First Response Multiplayer Clientside Library</Description>
+    <Copyright>Copyright © GTAPoliceMods 2024</Copyright>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <DebugType>none</DebugType>
+    <BuildDependsOn>$(BuildDependsOn);AfterBuildMigrated</BuildDependsOn>
+    <LangVersion>8</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>../FXServer-Data/resources/fivepd/Libraries/FivePD.Gamemode.Client</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>../build-public-pre/Libraries/FivePD.Gamemode.Client</OutputPath>
+  </PropertyGroup>
+  <Import Project="..\FivePD.Common\FivePD.Common.projitems" Label="Shared" />
+
+  <!-- Remove automatically generated files -->
+  <Target Name="RemoveGeneratedFiles" AfterTargets="Build">
+    <ItemGroup>
+      <RemovableGeneratedFiles Include="$(OutDir)*.json;$(OutDir)*.xml" />
+    </ItemGroup>
+    <Delete Files="@(RemovableGeneratedFiles)" />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="CitizenFX.Core.Client, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\FivePD.Gamemode.Statics\Libraries\FivePD.Gamemode.Client\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CitizenFX.Core.Client" Version="1.0.10230" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Update="SonarAnalyzer.CSharp" Version="8.36.1.44192" />
+  </ItemGroup>
+</Project>

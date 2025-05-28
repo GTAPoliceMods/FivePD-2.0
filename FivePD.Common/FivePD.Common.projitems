@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>7D4E06AA-FF50-4348-AAB8-637ECC932493</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FivePD.Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Builders\FPedBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Builders\FVehicleBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfigModels\DatabaseConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfigModels\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfigModels\Loadout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfigModels\MenuConfigs\DutyMenuConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfigModels\MenuConfigs\MenuItemConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfigModels\MenuConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfigModels\Vehicles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\EmptyConfigException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\EnumExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Locale.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Localization\DutyMenuLocalization.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Localization\ErrorLocalizations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Localization\Localization.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Localization\TrafficStopLocalization.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Localization\WarningLocalizations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Date.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FDutyStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FEntityType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FPoliceEventPriority.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FGender.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FPed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FPlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FVehicle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BasePoliceEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TrafficStop.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\CfxStyleText.cs" />
+  </ItemGroup>
+</Project>
